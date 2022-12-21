@@ -44,8 +44,8 @@ if st.button('Prediksi Antibody Terhadap Penyakit COVID-19'):
     bcell_prediction = model.predict([[start_position, end_position, chou_fasman, emini, kolaskar_tongaonkar, parker, isoelectric_point, aromaticity, hydrophobicity, stability]])
 
     if(bcell_prediction[0]==1):
-        bcell_diagnosis = 'Lemah'
-    else:
         bcell_diagnosis = 'Kuat'
+    else:
+        bcell_diagnosis = 'Lemah'
 
 st.success(bcell_diagnosis)
